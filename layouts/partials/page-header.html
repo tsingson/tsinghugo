@@ -1,4 +1,4 @@
-{{ $path := cond (gt (len .Site.Params.slidesDirPath) 0) $.Site.Params.slidesDirPath "themes/tsingsound/static/img/header-slides" }}
+{{ $path := cond (gt (len .Site.Params.slidesDirPath) 0) $.Site.Params.slidesDirPath "themes/tsinghugo/static/img/header-slides" }}
 {{ $pathURL := cond (gt (len .Site.Params.slidesDirPathURL) 0) $.Site.Params.slidesDirPathURL "img/header-slides" }}
 {{ $files := readDir $path }}
 {{ $files := where $files "Name" "ne" ".DS_Store" }}
