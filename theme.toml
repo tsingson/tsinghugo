@@ -1,0 +1,13 @@
+name        = "tsinghugo"
+license     = "MIT"
+licenselink = "https://github.com/tsingson/tsinghugo/blob/master/LICENSE"
+description = "All you need for a blog in one template."
+homepage    = "https://github.com/tsingson/tsinghugo"
+customdemo  = "https://github.com/tsingson/tsinghugo"
+tags        = ["blog", "personal"]
+features    = ["full image carousel", "hierachical toc", "katex"]
+min_version = 0.1
+
+[author]
+  name      = "tsingson"
+  homepage  = "https://github.com/tsingson"
