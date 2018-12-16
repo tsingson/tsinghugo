@@ -8,6 +8,8 @@
     <meta name="author" content="{{ . }}">{{ end }}
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
     {{ template "_internal/opengraph.html" . }}
+    {{ partial "seo_schema" . }}
+
     <title>
         {{ if eq .Kind "home" }}
         {{ .Site.Title }}
@@ -94,6 +96,28 @@
         transform: scale(1.0, 1.0);
         box-shadow: 0 62px 64px 0, 0 30px 32px 0, 0 14px 16px 0, 0 6px 8px 0, 0 2px 4px 0;
     }
+.nav-ul {
+  display: flex;
+  height: 44px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+
+    .nav-bg {
+    padding: 5px, 0, 0 , 5px;
+    margin: 0;
+    height: 48px;
+}
+    .nav-bgcolor {
+    background-image: linear-gradient(to bottom, #13547a 0%, #80d0c7 100%);
+    padding: 5px, 0, 0 , 5px;
+    margin: 0;
+    height: 48px;
+}
     </style>
     <!-- KaTeX -->
     {{ if .Site.Params.katex }}
@@ -104,6 +128,7 @@
     {{ if .Site.Params.highlightjs }}
     <link rel="stylesheet" href="{{ "css/vendors/highlight/github-gist.css"| absURL }}">
     {{ end }}
+    <link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
     <style type="text/css">
     img.responsive-img,
     video.responsive-video {
